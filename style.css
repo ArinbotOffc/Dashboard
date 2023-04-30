@@ -1,0 +1,83 @@
+/* Navigation Bar */
+.navbar {
+  background-color: #ffffff;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.navbar-brand {
+  font-size: 32px;
+  font-weight: bold;
+  color: #222222;
+  transition: all 0.3s ease;
+}
+
+.navbar-brand:hover {
+  color: #007bff;
+}
+
+.nav-link {
+  font-size: 18px;
+  color: #222222;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #007bff;
+}
+
+/* Main Content */
+.container {
+  margin-top: 50px;
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: bold;
+  color: #222222;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #555555;
+  margin-bottom: 30px;
+}
+
+/* Button */
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  font-size: 18px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0069d9;
+  border-color: #0062cc;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
