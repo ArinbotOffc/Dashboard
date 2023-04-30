@@ -42,39 +42,100 @@
   margin-top: 20px;
 }
 
-/* Responsive CSS for Subscription Cards */
-@media screen and (min-width: 992px) {
-  .card-subscription {
-    width: 31%;
-    margin-right: 2%;
-    margin-bottom: 0;
-    display: inline-block;
-    vertical-align: top;
-  }
-
-  .card-subscription:nth-child(3n) {
-    margin-right: 0;
+/* Responsive CSS */
+@media (max-width: 992px) {
+  /* Change to vertical layout when screen is less than or equal to 992px */
+  .subscription-card {
+    flex-direction: column !important;
   }
 }
 
-@media screen and (max-width: 991px) {
-  .card-subscription {
-    width: 48%;
-    margin-right: 2%;
-    margin-bottom: 0;
-    display: inline-block;
-    vertical-align: top;
-  }
-
-  .card-subscription:nth-child(2n) {
-    margin-right: 0;
+@media (max-width: 768px) {
+  /* Change to 2 columns layout when screen is less than or equal to 768px */
+  .subscription-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 20px;
   }
 }
 
-@media screen and (max-width: 767px) {
-  .card-subscription {
-    width: 100%;
-    margin-right: 0;
-    margin-bottom: 20px;
+@media (max-width: 576px) {
+  /* Change to 1 column layout when screen is less than or equal to 576px */
+  .subscription-card {
+    display: block;
   }
+}
+
+/* Custom CSS */
+.subscription-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.subscription-card .card {
+  width: 300px;
+  margin: 0 20px;
+}
+
+.subscription-card .card-header {
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+  color: #fff;
+  background-color: #007bff;
+}
+
+.subscription-card .card-body {
+  text-align: center;
+  padding: 20px;
+}
+
+.subscription-card .card-body h5 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.subscription-card .card-body ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.subscription-card .card-body li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.subscription-card .card-body li i {
+  margin-right: 5px;
+  font-size: 24px;
+}
+
+.subscription-card .card-body a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.subscription-card .card-body a:hover {
+  background-color: #0069d9;
+}
+
+.subscription-card .card-body .highlight {
+  font-weight: bold;
+  color: #007bff;
 }
